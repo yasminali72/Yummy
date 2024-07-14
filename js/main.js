@@ -30,7 +30,7 @@ getMeals();
           .eq(i)
           .animate(
             {
-              "margin-top": "0",
+              "margin-top": `0px`,
             },
             (i + 5) * 100
           );
@@ -50,7 +50,7 @@ open();
         `);
     $(".navbar-nav .nav-link").animate(
       {
-        "margin-top": "30px",
+        "margin-top": "25px",
       },
       500
     );
