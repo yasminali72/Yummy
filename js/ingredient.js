@@ -10,9 +10,8 @@ export async function getIngredients() {
   let ingredients = response.meals;
 
   UI.removeLoading()
-  
-  //  all ingredients
 
+  //  all ingredients
   // ingredients.forEach((ingredient) => {
   //   console.log(ingredient);
   //   UI.removeLoading()
@@ -20,9 +19,21 @@ export async function getIngredients() {
   // });
   
 // 20 ingredients
+console.log(ingredients.length);
+if(ingredients.length>20){
   for(let i=0;i<20;i++){
     UI.displayIngredients(ingredients[i]);
   }
+}
+else
+{
+  ingredients.forEach((ingredient) => {
+      console.log(ingredient);
+      UI.displayIngredients(ingredient);
+    });
+}
+
+
   $(" .ingredient").click(function () {
     let ingredientName = $(this).attr("id");
     console.log(ingredientName);

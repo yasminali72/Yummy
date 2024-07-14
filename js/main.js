@@ -12,7 +12,7 @@ export let widthMenu;
 
 
 getMeals();
-
+$('#Categories , #areas, #Ingredients').hide()
 
  function open() {
   $(".nav-header #bars").click(function () {
@@ -92,21 +92,17 @@ $(".nav-link").click(function () {
   close();
 });
 
-// calling
-
 
 
 // search
 $("#search").click(function () {
   clearSections();
-  $("#Search").show(function () {
-    getMeals();
-  });
+  $("#Search").show()
   $("#Meals").show();
-  $("#Meals .container").removeClass("p-lg-5").removeClass("pt-5");
+  $("#Meals .container").removeClass("p-lg-5").removeClass("pt-5").addClass('pb-5');
 
   UI.displaySearch(function () {
-    UI.addLoading()
+    
     getMeals();
   });
 
@@ -114,15 +110,21 @@ $("#search").click(function () {
     let mealName = $(this).val();
     console.log(mealName);
     $("#meals").empty();
-    UI.addLoading()
+    $('.loadingForSearch').removeClass('d-none').addClass('d-flex')
+    
     getMealsByName(mealName);
   });
   $("#mealLetter").keyup(function () {
     let mealLetter = $(this).val();
     console.log(mealLetter);
     $("#meals").empty();
-    UI.addLoading()
+    $('.loadingForSearch').removeClass('d-none').addClass('d-flex')
+    if(mealLetter=='' || mealLetter==' '){
+      getMealsByLetter('a')
+    }
+    
     getMealsByLetter(mealLetter);
+
   });
 });
 

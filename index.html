@@ -9,30 +9,31 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="position-relative">
-    
+    <!-- loading -->
 <div class="loading position-absolute bg-black  vh-100 w-100 start-0 end-0 top-0 bottom-0 d-flex justify-content-center align-items-center overflow-hidden">
     <span class="loader"></span>
 </div>
-
+<!-- header -->
 <header class=" vh-100 d-none position-fixed  " >
 <div class="menu h-100 w-75   p-3  d-flex flex-column justify-content-between bg-black ">
     <div class="menu-top  " >
         <ul class="navbar-nav">
             <li class="nav-item ">
-              <a class="nav-link  text-capitalize text-white" aria-current="page" href="#" id="search">search</a>
+              <a class="nav-link  text-capitalize text-white" aria-current="page" href="#Search" id="search">search</a>
             </li>
             <li class="nav-item " >
-                <a class="nav-link  text-capitalize text-white"  href="#" id="Category">Categories</a>
+                <a class="nav-link  text-capitalize text-white"  href="#Categories" id="Category">Categories</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link  text-capitalize text-white"  href="#" id="area">area</a>
+                <a class="nav-link  text-capitalize text-white"  href="#areas" id="area">area</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link  text-capitalize text-white"  href="#" id="ingredient">Ingredients</a>
+                <a class="nav-link  text-capitalize text-white"  href="#Ingredients" id="ingredient">Ingredients</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link  text-capitalize text-white"  href="#" id="contact">contact us</a>
+                <a class="nav-link  text-capitalize text-white"  href="#Contact" id="contact">contact us</a>
               </li>
 
           </ul>
@@ -68,7 +69,7 @@
 
 <!-- meals -->
 <section id="Meals">
-    <div class="container pt-5 p-lg-5">
+    <div class="container pt-5 p-lg-5 ">
        <div class="row g-4" id="meals">
      
        </div>
@@ -78,14 +79,14 @@
 
 
 
-
+<!-- Categories -->
 <section id="Categories">
     <div class="container pt-5 p-lg-5">
         <div class="meals row g-4" id="">     
         </div>
      </div>
 </section>
-
+<!-- area -->
 <section id="areas">
     <div class="container pt-5 p-lg-5">
         <div class="areas row g-4" >
@@ -93,7 +94,7 @@
         </div>
     </div>
 </section>
-
+<!-- Ingredients -->
 <section id="Ingredients">
     <div class="container pt-5 p-lg-5">
         <div class="ingredients row g-4" >
@@ -101,14 +102,14 @@
         </div>
     </div>
 </section>
-
+<!-- contact -->
 <section id="Contact" style="display: none;">
    
 <div class="container vh-100 w-75  d-flex justify-content-center align-items-center ">
 <div class="row  w-100 g-4">
    <div class="col-md-6 " id="Name" >
         
-        <input type="text" class="form-control" id="UserName" placeholder="Enter your Name">
+        <input type="text" class="form-control" id="UserName" placeholder="Enter your Name" >
         <div class="col mt-2 " style="display: none;">
             <p class="w-100  rounded text-center p-3">Special characters and numbers not allowed</p>
             </div>  
@@ -170,9 +171,14 @@
 </div>
 </section>
 
-
+<!-- detail -->
 <section id="details" class="position-absolute  vh-100 top-0  bottom-0 end-0   d-none text-white overflow-auto">  
 </section>
+
+<!-- loading for search only -->
+<div class="loadingForSearch position-absolute   vh-100 w-100 start-0 end-0 top-0 bottom-0 d-none justify-content-center align-items-center overflow-hidden" >
+    <span class=" loader"></span>
+</div>
 
 <script src="js/jquery-3.7.1.js"></script>
 <script src="js/main.js" type="module"></script>

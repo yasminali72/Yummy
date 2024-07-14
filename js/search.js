@@ -10,7 +10,8 @@ export async function getMealsByName(name) {
     console.log(api);
     console.log(response);
   let meals =response.meals
-UI.addLoading()
+  $('.loadingForSearch').removeClass('d-flex').addClass('d-none')
+
   dataMeal(meals)
 }
 
@@ -25,6 +26,6 @@ export async function getMealsByLetter(Letter) {
     console.log(api);
     console.log(response);
   let meals =response.meals
-UI.addLoading()
+  $('.loadingForSearch').removeClass('d-flex').addClass('d-none')
   dataMeal(meals)
 }

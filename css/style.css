@@ -4,6 +4,7 @@ body{
 .loading{
   z-index: 900;
 }
+
 .loader {
     color: #fff;
     font-size: 10px;

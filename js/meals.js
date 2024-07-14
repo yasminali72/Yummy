@@ -15,6 +15,7 @@ UI.addLoading()
 export function dataMeal(meals) {
   $("#meals").empty();
   UI.removeLoading()
+
   // all meals
   meals.forEach((meal) => {
     // console.log(meal);
@@ -51,9 +52,17 @@ function category(meals) {
   //   UI.displayDetailsCategory(meal);
   // });
   // 20 meal only
-  for(let i=0;i<20;i++){
-    UI.displayDetailsCategory(meals[i]);
+  if(meals.length>20){
+    for(let i=0;i<20;i++){
+      UI.displayDetailsCategory(meals[i]);
+    }
   }
+  else{
+    meals.forEach((meal) => {
+        UI.displayDetailsCategory(meal);
+      });
+  }
+ 
 
   $(".meal").click(function () {
     let id = $(this).attr("id");

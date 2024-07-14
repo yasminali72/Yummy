@@ -13,7 +13,7 @@ static displaySearch(){
           <input type="text" class="form-control-plaintext  border rounded p-2 text-white  "  placeholder="Search By Name" aria-label="Search By Name" id='mealName'>
         </div>
         <div class="col">
-          <input type="text" class="form-control-plaintext border rounded p-2 text-white  " placeholder="Search By First Letter" aria-label="Search By First Letter" id='mealLetter'>
+          <input type="text" class="form-control-plaintext border rounded p-2 text-white  " placeholder="Search By First Letter" aria-label="Search By First Letter" id='mealLetter' maxlength="1">
         </div>
   
   
