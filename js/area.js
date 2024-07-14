@@ -38,10 +38,15 @@ export async function getAreaByName(areaName) {
   let meals = response.meals;
 
   UI.removeLoading()
-  meals.forEach((meal) => {
+  // meals.forEach((meal) => {
 
-    UI.displayMealsArea(meal);
-  });
+  //   UI.displayMealsArea(meal);
+  // });
+  // 20 meal
+  for(let i=0;i<20;i++){
+    UI.displayMealsArea(meals[i]);
+  }
+
 
   $(".meal").click(function () {
     let mealId = $(this).attr("id");

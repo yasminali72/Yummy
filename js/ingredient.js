@@ -8,13 +8,21 @@ export async function getIngredients() {
   let response = await api.json();
 
   let ingredients = response.meals;
-  // console.log(ingredients);
 
-  ingredients.forEach((ingredient) => {
-    console.log(ingredient);
-    UI.removeLoading()
-    UI.displayIngredients(ingredient);
-  });
+  UI.removeLoading()
+  
+  //  all ingredients
+
+  // ingredients.forEach((ingredient) => {
+  //   console.log(ingredient);
+  //   UI.removeLoading()
+  //   UI.displayIngredients(ingredient);
+  // });
+  
+// 20 ingredients
+  for(let i=0;i<20;i++){
+    UI.displayIngredients(ingredients[i]);
+  }
   $(" .ingredient").click(function () {
     let ingredientName = $(this).attr("id");
     console.log(ingredientName);

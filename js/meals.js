@@ -6,19 +6,22 @@ export async function getMeals() {
     "https://www.themealdb.com/api/json/v1/1/search.php?s="
   );
   let response = await api.json();
-  console.log(api);
-  console.log(response);
+  let meals=response.meals
+  
 UI.addLoading()
-  dataMeal(response.meals);
+  dataMeal(meals);
 }
 
 export function dataMeal(meals) {
   $("#meals").empty();
   UI.removeLoading()
+  // all meals
   meals.forEach((meal) => {
     // console.log(meal);
     UI.displayMeals(meal);
   });
+
+
   $(".meal").click(function () {
     let id = $(this).attr("id");
     console.log(id);
@@ -36,16 +39,21 @@ export async function getDetailsCategory(categoryName) {
   let response = await api.json();
   console.log(api);
   console.log(response.meals);
-
+  let meals=response.meals
   UI.addLoading()
-  category(response.meals);
+  category(meals);
 }
 
 function category(meals) {
   UI.removeLoading()
-  meals.forEach((meal) => {
-    UI.displayDetailsCategory(meal);
-  });
+  // all meals
+  // meals.forEach((meal) => {
+  //   UI.displayDetailsCategory(meal);
+  // });
+  // 20 meal only
+  for(let i=0;i<20;i++){
+    UI.displayDetailsCategory(meals[i]);
+  }
 
   $(".meal").click(function () {
     let id = $(this).attr("id");
