@@ -224,12 +224,11 @@ $("#UserPass").keyup(function () {
   } else  {
     $("#Pass").children("div").hide();
   }
-if(!validation.validateRepass(UserPass, Repassword)) {
-  $("#Repass").children("div").show();
-} else {
-  $("#Repass").children("div").hide();
+if(validation.validateRepass(UserPass, Repassword)) {
+  $("#Repass").children("div").hide(); 
+
 }
-});
+})
 
 
 $("#Repassword").on('input',function () {

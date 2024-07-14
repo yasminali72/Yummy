@@ -6,13 +6,12 @@ export class UI {
 
 
 static displaySearch(){
-  this.removeLoading()
-  $('#Search').html(` <div class="container pt-5 p-lg-5">
-  <div class="row ps-3 " id="search">
-      <div class="col ">
+  $('#Search').html(` <div class="container w-75 pt-4 p-lg-4">
+  <div class="row mb-5  g-3" id="search">
+      <div class="col-md-6 ">
           <input type="text" class="form-control-plaintext  border rounded p-2 text-white  "  placeholder="Search By Name" aria-label="Search By Name" id='mealName'>
         </div>
-        <div class="col">
+        <div class="col-md-6">
           <input type="text" class="form-control-plaintext border rounded p-2 text-white  " placeholder="Search By First Letter" aria-label="Search By First Letter" id='mealLetter' maxlength="1">
         </div>
   
@@ -23,7 +22,6 @@ static displaySearch(){
 
 
   static displayMeals(meal) {
-this.removeLoading()
     $("#Meals #meals").append(` <div class="col-md-3">
   <div class="meal rounded-3 position-relative overflow-hidden" id='${meal.idMeal}' role='button'>
       <img src='${meal.strMealThumb}' alt="" class="w-100 ">

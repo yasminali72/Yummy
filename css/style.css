@@ -121,3 +121,7 @@ header{
     background-color: #F8D7DA;
     color: #842029;
 }
+
+#submitBtn:focus{
+box-shadow: 0 0 0 0.25rem rgb(220 53 69 / 50%);
+}
