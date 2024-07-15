@@ -151,24 +151,6 @@ $("#ingredient").click(function () {
   UI.addLoading()
   getIngredients();
 });
-
-$("#contact").click(function () {
-  UI.removeLoading()
-  clearSections();
-  $("#Contact").show();
-  $('input').val('')
-  
-  $("#Name").children("div").hide();
-  $("#Email").children("div").hide();
-  $("#Phone").children("div").hide();
-  $("#Age").children("div").hide();
-  $("#Pass").children("div").hide();
-  $("#Repass").children("div").hide();
-
-  
-
-});
-
 export function clearSections() {
   $(
     "#Search , #Meals #meals , #Categories .meals , #areas .areas , #details ,#Ingredients .ingredients "
@@ -177,8 +159,25 @@ export function clearSections() {
   $("#details").removeClass("d-block").addClass("d-none");
 }
 
+
+let UserName , UserEmail ,UserPhone ,UserAge , UserPass ,Repassword;
+$("#contact").click(function () {
+  UI.removeLoading()
+  clearSections();
+  $("#Contact").show();
+  $('input').val('')
+  $("#Name").children("div").hide();
+  $("#Email").children("div").hide();
+  $("#Phone").children("div").hide();
+  $("#Age").children("div").hide();
+  $("#Pass").children("div").hide();
+  $("#Repass").children("div").hide();
+
+   setInterval(checkvalidation)
+});
+
+
 // input in contact
-  let UserName , UserEmail ,UserPhone ,UserAge , UserPass ,Repassword;
   
 $("#UserName").keyup(function () {
   UserName = $(this).val();
@@ -252,12 +251,7 @@ $("#Repassword").on('input',function () {
 });
 
 
-  let intrval=setInterval(function(){
-  if(UserName && UserAge && UserEmail && UserPass && UserPhone && Repassword !=null){
-    checkvalidation()
-  }
- 
-});
+
 
 
 function checkvalidation(){
@@ -274,14 +268,19 @@ function checkvalidation(){
   else{
     $('#submitBtn').attr('disabled',true)
 
-    console.log(UserEmail);
   }
 }
 $('#submitBtn').click(function(){
   $('input').val('')
-console.log(UserAge);
   $('#submitBtn').attr('disabled',true)
-  clearInterval(intrval)
+  
+
+  UserName=null
+  UserAge=null
+  UserEmail=null
+  UserPass=null
+  UserPhone=null
+  Repassword=null
 })
 
 
