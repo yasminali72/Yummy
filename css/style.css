@@ -68,7 +68,7 @@ body{
     
 header{
     width: 270px;
-   z-index: 999;
+   z-index: 990;
 
 }
 .form-control-plaintext:focus{
@@ -84,11 +84,14 @@ header{
     margin-top: 25px;
 }
 
-
+.meal{
+  z-index: 992;
+}
 .layer{
     transform: translateY(110%);
     background-color: #f9f6f6ca; 
     transition:all .5s; 
+    
 }
 .layer h3 , p{
     overflow: hidden;
@@ -124,4 +127,24 @@ header{
 
 #submitBtn:focus{
 box-shadow: 0 0 0 0.25rem rgb(220 53 69 / 50%);
+}
+
+.container{
+  padding-left: 80px !important;
+}
+
+#Search { 
+  z-index: 993;
+}
+
+@media (min-width:768px) {
+
+  .container{
+  padding-left: 48px !important;
+}
+#Search .container{
+  padding-left: 24px !important;
+  
+}
+
 }

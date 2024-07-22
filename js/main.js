@@ -24,6 +24,7 @@ $('#Categories , #areas, #Ingredients').hide()
     $(".nav-header #bars").replaceWith(
       '<i class="fa-solid fa-xmark fs-1" id="close" role="button"></i>'
     );
+    $('header').css({'z-index':`999`})
     $(".menu").animate({ "margin-left": `0px` }, 500, function () {
       for (let i = 0; i < 5; i++) {
         $(".navbar-nav .nav-link")
@@ -54,8 +55,9 @@ open();
       },
       500
     );
-    $(".menu").animate({ "margin-left": `-${widthMenu}px` }, 500);
-
+    $(".menu").animate({ "margin-left": `-${widthMenu}px` }, 500,function(){
+      $('header').css({'z-index':`990`})});
+  
     open();
   });
 }
@@ -77,7 +79,11 @@ open()
 
 
 $(".nav-link").click(function () {
-  $(".menu").animate({ "margin-left": `-${widthMenu}px` }, 500);
+  $(".menu").animate({ "margin-left": `-${widthMenu}px` }, 500,function(){
+    $('header').css({'z-index':`990`})
+  });
+  
+
   $(".navbar-nav .nav-link").animate(
     {
       "margin-top": "30px",

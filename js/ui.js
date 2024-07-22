@@ -6,8 +6,8 @@ export class UI {
 
 
 static displaySearch(){
-  $('#Search').html(` <div class="container w-75 pt-4 p-lg-4">
-  <div class="row mb-5  g-3" id="search">
+  $('#Search').html(` <div class="container w-75 pt-4 p-lg-4 ">
+  <div class="row mb-5  g-3 " id="search">
       <div class="col-md-6 ">
           <input type="text" class="form-control-plaintext  border rounded p-2 text-white  "  placeholder="Search By Name" aria-label="Search By Name" id='mealName'>
         </div>
