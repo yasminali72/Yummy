@@ -156,11 +156,14 @@ ${tagsStr}
   }
 
  static addLoading(){
-    $('.loading').removeClass('d-none').addClass('d-flex') 
+    $('.loading').removeClass('d-none').addClass('d-flex') ;
+    $('header').css('z-index',999)
   }
 static removeLoading(){
   $('header').removeClass('d-none').addClass('d-flex')
 
   $('.loading').removeClass('d-flex').addClass('d-none')
+  $('header').css('z-index',990)
+
 }
 }
